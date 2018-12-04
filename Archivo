@@ -1,0 +1,21 @@
+useradd -d /home/cirilo -u 2000 -g users -G audio,cdrom,floppy,plugdev,video,power,netdev,lp,scanner -s /bin/bash cirilo
+mkdir -p /home/cirilo
+chown -R cirilo:users /home/cirilo 
+chmod 700 /home/cirilo 
+ls -ld /home/cirilo
+passwd alumno
+
+grep 'export LANG' /etc/profile.d/lang.sh
+#export LANG=en_US
+#export LANG=C
+export LANG=en_US.UTF-8
+#export LANG=en_US.ISO8859-1
+nano /etc/profile.d/lang.sh
+
+grep 'setenv LANG' /etc/profile.d/lang.csh
+#setenv LANG en_US
+#setenv LANG C
+setenv LANG en_US.UTF-8
+#setenv LANG en_US.ISO8859-1
+nano /etc/profile.d/lang.csh
+
